@@ -20,9 +20,9 @@
 // }
 
 node {
-    docker.image('node:16-buster-slim').withRun('-p 3000:3000'){
+    docker.image('node:16-buster-slim').withRun('-p 3000:3000'){ c ->
         stage('Build'){
-            sh '/usr/local/bin/npm install'
+            sh 'npm install'
         }
 
         stage('Test'){
